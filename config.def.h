@@ -67,6 +67,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *togglevol[] = { "amixer", "set", "Master", "toggle", NULL };
 static const char *lowervol[] = { "amixer", "set", "Master", "10%-", NULL };
 static const char *raisevol[] = { "amixer", "set", "Master", "10%+", NULL };
+static const char *clipmenu[] = { "clipmenu", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,6 +108,7 @@ static const Key keys[] = {
 	{ 0x0,                          XF86XK_AudioMute,        spawn,          {.v = togglevol } },
 	{ 0x0,                          XF86XK_AudioRaiseVolume, spawn,          {.v = raisevol } },
 	{ 0x0,                          XF86XK_AudioLowerVolume, spawn,          {.v = lowervol } },
+	{ MODKEY,                       XK_c,                    spawn,          {.v = clipmenu} },
 };
 
 /* button definitions */
